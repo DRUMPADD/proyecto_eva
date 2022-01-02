@@ -29,4 +29,4 @@ app.listen(app.get('port'), function () {
     console.log("Server listening on port", app.get('port'));
 });
 
-exports.widgets = functions.https.onRequest(app);
+exports.widgets = app.https.onRequest();
