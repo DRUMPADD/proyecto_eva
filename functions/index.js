@@ -10,8 +10,8 @@ const functions = require("firebase-functions");
 const express = require("express");
 const app = express();
 
-app.get('/', (request, response) => {
-    response.send("The best app");
-});
-
 exports.app = functions.https.onRequest(app);
+
+app.get("/", (request, response) => {
+  response.send("The best app");
+});
