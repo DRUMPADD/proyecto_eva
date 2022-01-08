@@ -1,3 +1,19 @@
+:root {
+    --back-color: rgb(17, 17, 82);
+    --link-button: rgb(146, 138, 70);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+}
+
 /* ?? Formulario */
 .modal-form {
     background-color: rgba(0,0,0,.8);
@@ -50,8 +66,13 @@
     align-items: center;
 }
 
+
+.modal-contenido div:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
 .form-cont {
-    margin: 30px;
+    margin: 1.9rem;
     width: 100%;
 }
 
@@ -65,18 +86,16 @@
 }
 
 .img-cont {
-    padding: 40px;
+    padding: 2.5rem;
 }
 
-.img-cont img {
-    width: 400px;
-}
-
-.form-cont .form-inputs {
+.form-inputs {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
     align-items: center;
+    column-gap: 3em;
 }
 
 .form-cont div label {
@@ -119,6 +138,11 @@
     text-align: center;
 }
 
+.logo-form {
+    width: 100%;
+    height: 250px;
+}
+
 .boton {
     border: none;
     padding: 15px 10px;
@@ -134,4 +158,85 @@
 }
 .boton:active {
     transform: scale(.8);
+}
+
+
+@media only screen and (max-width: 800px) {
+    .modal-form {
+        overflow: auto;
+        /* overflow-y: hidden; */
+    }
+    .modal-contenido {
+        width: 90%;
+    }
+
+    .modal-contenido div:nth-child(2) {
+        display: block;
+    }
+
+    .logo-form {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-cont {
+        margin: 1.9rem;
+        width: 90%;
+    }
+
+    .form-inputs {
+        width: 100%;
+    }
+
+    .form-inputs .entrada {
+        width: 100%;
+    }
+
+    .correo {
+        height: 3em;
+    }
+
+    .mensaje {
+        height: 5em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .modal-form {
+        overflow: auto;
+        /* overflow-y: hidden; */
+    }
+    .modal-contenido {
+        width: 90%;
+    }
+
+    .modal-contenido div:nth-child(2) {
+        display: block;
+    }
+
+    .logo-form {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-cont {
+        margin: 1.9rem;
+        width: 90%;
+    }
+
+    .form-inputs {
+        width: 100%;
+    }
+
+    .form-inputs .entrada {
+        width: 100%;
+    }
+
+    .correo {
+        height: 3em;
+    }
+
+    .mensaje {
+        height: 5em;
+    }
 }
